@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Webpage with Hamburger Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+
+  <header>
+<marquee>
+<p style="text-align:center;">
+    ⚡Mr Walker's Information Technology Class⚡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+🌐Explore my page and interact with the artifacts🌐
+</p>
+</marquee>
+<br>
+    <!-- Hamburger icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Hidden nav menu -->
+    <nav id="menu">
+      <a href="philosophy.html">Philosophy</a>
+      <a href="classroom.html">Google Classroom</a>
+      <a href="#">Quiz</a>
+      <a href="#">Reflection</a>
+      <a href="#">References</a>
+    </nav>
+  </header>
+
+  <!-- Slideshow Section -->
+  <section class="slideshow">
+<div class="slides fade">
+  <img src="banner1.gif" alt="Animated Banner">
+</div>
+<div class="slides fade">
+  <img src="banner2.png" alt="Static Banner 2">
+</div>
+<div class="slides fade">
+  <img src="banner3.gif" alt="Static Banner 3">
+</div>
+   <!-- Navigation dots -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+
+
+<body>
+  <div class="container">
+    <h2>About me</h2>
+<div class="about-section">
+  <img src="me.png" alt="My photo" class="profile-pic">
+  
+  <p class="p2">
+My name is Phillip Walker, and I am a 
+motivated, disciplined, and goal-driven 
+individual who takes pride in continuous 
+self-improvement. I have a strong interest 
+in information technology and leadership, 
+and I actively seek opportunities that 
+allow me to grow both academically and 
+personally. I am also an athlete, which 
+has taught me the importance of hard work, 
+consistency, and resilience which are values that I 
+apply in everything I do. I consider myself 
+responsible, focused, and willing to learn, 
+and I am always eager to contribute 
+positively to any team or environment I 
+am part of.
+  </p>
+</div>
+<hr>
+
+ <p>There are alot of stuff on this website to expore, check them out !</p>
+
+<a href="artifacts.html" class="button">EXPLORE</a>
+  </div>
+
+  <footer>
+    © 2025 Futuristic Design. All rights reserved.
+  </footer>
+
+  <script>
+// HAMBURGER
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+//HAMBURGER
+
+// Slideshow logic
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 10000); // Change image every 4 seconds
+    }
+
+    function currentSlide(n) {
+      slideIndex = n-1;
+      showSlides();
+    }
+
+  </script>
+</body>
+</html>

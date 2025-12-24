@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Webpage with Hamburger Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+
+  <header>
+<marquee>
+<p style="text-align:center;">
+    ⚡Mr Walker's Information Technology Class⚡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+👁️you're currently viewing google classroom💻🎓
+</p>
+</marquee>
+<br>
+    <!-- Hamburger icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Hidden nav menu -->
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="artifacts.html">Artifacts</a>
+      <a href="classroom.html">Google Classroom</a>
+      <a href="#">Quiz</a>
+      <a href="#">Reflection</a>
+    </nav>
+  </header>
+
+  <!-- Slideshow Section -->
+  <section class="slideshow">
+<div class="slides fade">
+  <img src="banner1.gif" alt="Animated Banner">
+</div>
+<div class="slides fade">
+  <img src="banner2.png" alt="Static Banner 2">
+</div>
+<div class="slides fade">
+  <img src="banner3.gif" alt="Static Banner 3">
+</div>
+   <!-- Navigation dots -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+
+
+<body>
+  <div class="container">
+    <h1>Google Classroom</h1>
+<p>Navigation Tutorial</p>
+
+<div style="text-align:center; margin: 30px 0;">
+
+<iframe src="https://drive.google.com/file/d/1aL2q9GODSTR3JPjBRZ2R1uTcTjUXChvj/preview" 
+  width="640" height="360" allow="autoplay" 
+  style="border:none; border-radius:12px; display:block; margin:20px auto;">
+</iframe>
+
+</div>
+<hr>
+ <p>Click below to explore the google classroom</p>
+
+<a href="https://classroom.google.com/c/NzkyNTYyOTM0MTEw?cjc=mow3ubpk" class="button">GO</a><br><br>
+<hr>
+<a href="index.html" class="button">HOME</a>
+  <footer>
+    © 2025 Futuristic Design. All rights reserved.
+  </footer>
+
+  <script>
+// HAMBURGER
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+//HAMBURGER
+
+// Slideshow logic
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 10000); // Change image every 4 seconds
+    }
+
+    function currentSlide(n) {
+      slideIndex = n-1;
+      showSlides();
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Webpage with Hamburger Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+
+  <header>
+<marquee>
+<p style="text-align:center;">
+    ⚡Mr Walker's Information Technology Class⚡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+👁️you're currently viewing My Philosophy💡🧠
+</p>
+</marquee>
+<br>
+    <!-- Hamburger icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Hidden nav menu -->
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="Artifacts.html">Artifacts</a>
+      <a href="#">Google Classroom</a>
+      <a href="#">Quiz</a>
+      <a href="#">Reflection</a>
+    </nav>
+  </header>
+
+  <!-- Slideshow Section -->
+  <section class="slideshow">
+<div class="slides fade">
+  <img src="banner1.gif" alt="Animated Banner">
+</div>
+<div class="slides fade">
+  <img src="banner2.png" alt="Static Banner 2">
+</div>
+<div class="slides fade">
+  <img src="banner3.gif" alt="Static Banner 3">
+</div>
+   <!-- Navigation dots -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+
+
+<body>
+  <div class="container">
+    <h2>My Philosophy</h2>
+<p>ISTE STANDARD DISCUSSION </p>
+
+<div>
+<p class="p2">
+I strongly believe that technology, when used purposefully and 
+responsibly, is a powerful tool for enhancing teaching 
+and learning. My personal philosophy for using technology 
+in education is centered on improving student engagement, 
+promoting critical thinking, and preparing learners to 
+function effectively in a digital world. Technology should 
+not replace good teaching; instead, it should support 
+meaningful learning experiences that are student-centered, 
+interactive, and relevant to real-life situations.
+(ISTE Standards for Educators, 2025) Outlines the set of standards that educators should posses; such as: 2.1 Learner, 2.2 Leader, 2.3 Citizen, 2.4 Collaborator, 2.5 Designer, 2.6 Facilitator, and 2.7 Analyst. Among the ISTE Standards for Educators, Standard 2.1: Learner stands out as especially relevant to the successful implementation of Jamaica’s National Standards Curriculum. This standard emphasizes continuous professional growth through collaboration, goal-setting, and staying current with research-based practices. The NSC promotes student-centered learning, critical thinking, and integration of technology goals that require educators to evolve alongside pedagogical innovations. By actively participating in professional learning networks and setting technology-driven goals, Jamaican teachers can better adapt to the NSC’s emphasis on inquiry-based and competency-driven instruction. Crompton (2023) found that educators who engage with ISTE’s Learner standard show measurable gains in student outcomes, especially when digital tools are used to personalize learning.
+Practically speaking, embracing the Learner standard empowers Jamaican educators to overcome challenges such as limited resources and uneven tech access. For example, teachers in rural aka bush areas can join global PLNs to share strategies, access open educational resources, and learn how to integrate low-cost tech solutions into their classrooms. This aligns with the NSC’s vision of equity and inclusivity. Moreover, when teachers reflect on their practice and apply findings from the learning sciences, they’re better equipped to design lessons that resonate with diverse learners. In short, the Learner standard doesn’t just support the NSC it activates it, turning policy into practice through empowered, informed educators.
+
+</p><br>
+</div>
+<hr>
+ <p>There are alot of stuff on this website to expore, check them out !</p>
+
+<a href="index.html" class="button">HOME</a>
+  <footer>
+    © 2025 Futuristic Design. All rights reserved.
+  </footer>
+
+  <script>
+// HAMBURGER
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+//HAMBURGER
+
+// Slideshow logic
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 10000); // Change image every 4 seconds
+    }
+
+    function currentSlide(n) {
+      slideIndex = n-1;
+      showSlides();
+    }
+
+  </script>
+</body>
+</html>

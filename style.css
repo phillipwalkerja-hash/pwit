@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', Russo One;
+  background: radial-gradient(circle at top left, #0f0f1a, #000000);
+  color: #e0e0e0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #010029, #08f);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 40px;
+  height: 5px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background: #111;
+  position: absolute;
+  top: 20px;
+  right: 200px;
+  padding: 20px;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  z-index: 1000;   /* ensures menu is on top */
+}
+
+nav.show {
+  display: flex;
+}
+
+nav a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 0;
+  transition: 0.3s;
+  font-size: 1.3em;
+}
+
+nav a:hover {
+  color: #f0f;
+  text-shadow: 0 0 10px #f0f;
+}
+
+/* Main content */
+.container {
+  padding: 40px;
+  text-align: center;
+}
+
+.slideshow {
+  width: 90%;              /* take up 90% of the window width */
+  max-width: 1200px;       /* optional: cap the maximum size */
+  height: 80%;            /* 50% of viewport height */
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border: 3px solid #0ff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #08f;
+  position: relative;
+  z-index: 1;      /* stays behind the menu */
+
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* keeps proportions, fills box */
+  border-radius: 12px;
+  transition: opacity 1s ease;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+@media (max-width: 100px) {
+  .slideshow {
+    height: 30vh;   /* smaller height on phones */
+  }
+}
+
+h1 {
+  font-family: 'Pixelated retro style', sans-serif;
+  font-size: 3em;
+  color: #0ff;
+  text-shadow: 0 0 20px #0ff, 0 0 40px #08f;
+}
+h2 {
+  font-family: 'Audiowide', sans-serif;
+  text-align: center;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #08f;
+}
+
+
+p {
+font-family: 'Pixelated retro style', sans-serif
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.3em;
+  line-height: 1.6;
+  color: #0ff;
+text-shadow: 0 0 10px #0ff, 0 0 20px #08f; /* glowing effect */
+
+}
+.p2 {
+  font-family: 'Roboto', sans-serif;   /* or any font you import */
+  font-size: 1.5em;                       /* custom size */
+  color: #a0ebeb;                            /* neon cyan text */
+  text-align: center;                     /* center align */
+  text-shadow: 0 0 5px #0ff, 0 0 1px #08f; /* glowing effect */
+  background: rgba(0,0,0,0.1);            /* optional background */
+  padding: 20px;
+  line-height: 3;
+
+}
+
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  color: #0ff;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #08f;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: #111;
+  color: #888;
+  font-size: 0.9em;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: url("bg.png") no-repeat center center fixed;
+  background-size: cover;   /* makes it fill the screen */
+  color: #e0e0e0;
+}
+.about-section {
+  text-align: center;       /* centers everything inside */
+  margin: 40px auto;
+}
+
+.profile-pic {
+  width: 30%;             /* adjust size */
+  height: auto;
+  border-radius: 50%;       /* optional: circular image */
+  box-shadow: 0 0 20px #0ff, 0 0 40px #08f;
+  display: block;
+  margin: 0 auto 20px auto; /* centers image and adds spacing below */
+}
+
+.about-section pre {
+  display: inline-block;    /* keeps text centered */
+  text-align: centre;         /* keeps text aligned nicely inside */
+  font-size: 1.5em;
+  color: #ccc;
+  background: rgba(0,0,0,0.5); /* optional: semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: auto;
+  line-height: 2;
+}
+pre {
+  display: inline-block;    /* keeps text centered */
+  text-align: centre;         /* keeps text aligned nicely inside */
+  font-size: 1.5em;
+  color: #ccc;
+  background: rgba(0,0,0,0.5); /* optional: semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: auto;
+  line-height: 2;
+}
