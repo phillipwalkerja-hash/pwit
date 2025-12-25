@@ -55,7 +55,7 @@ nav a {
   font-weight: bold;
   margin: 10px 0;
   transition: 0.3s;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 nav a:hover {
@@ -115,8 +115,8 @@ h1 {
 h2 {
   font-family: 'Audiowide', sans-serif;
   text-align: center;
-  color: #0ff;
-  text-shadow: 0 0 10px #0ff, 0 0 10px #08f;
+  color: #a0ebeb;
+  text-shadow: 0 0 5px #08f, 0 0 0px #08f;
 }
 
 
@@ -124,21 +124,21 @@ p {
 font-family: 'Pixelated retro style', sans-serif
   max-width: 800px;
   margin: auto;
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1.6;
   color: #0ff;
-text-shadow: 0 0 10px #0ff, 0 0 5px #08f; /* glowing effect */
+text-shadow: 0 0 50px #0ff, 0 0 5px #08f; /* glowing effect */
 
 }
 .p2 {
   font-family: 'Roboto', sans-serif;   /* or any font you import */
-  font-size: 1em;                       /* custom size */
+  font-size: 1.1em;                       /* custom size */
   color: #a0ebeb;                            /* neon cyan text */
   text-align: center;                     /* center align */
-  text-shadow: 0 0 5px #0ff, 0 0 0.05px #08f; /* glowing effect */
+  text-shadow: 0 0 2px #0ff, 0 0 0.05px #08f; /* glowing effect */
   background: rgba(0,0,0,0.05);            /* optional background */
-  padding: 20px;
-  line-height: 3;
+  padding: 10px;
+  line-height: 2;
 
 }
 
@@ -186,7 +186,7 @@ body {
 }
 
 .profile-pic {
-  width: 30%;             /* adjust size */
+  width: 40%;             /* adjust size */
   height: auto;
   border-radius: 50%;       /* optional: circular image */
   box-shadow: 0 0 20px #0ff, 0 0 40px #08f;
@@ -197,7 +197,7 @@ body {
 .about-section pre {
   display: inline-block;    /* keeps text centered */
   text-align: centre;         /* keeps text aligned nicely inside */
-  font-size: 1.5em;
+  font-size: 1em;
   color: #ccc;
   background: rgba(0,0,0,0.5); /* optional: semi-transparent background */
   padding: 20px;
@@ -217,4 +217,44 @@ pre {
   max-width: 1200px;
   margin: auto;
   line-height: 2;
+}
+
+
+/* ARTIFACTS MENU*/
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.menu-box {
+  background: rgba(0, 255, 255, 0.1);
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #0ff, 0 0 30px #08f;
+}
+
+.menu-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.menu-box p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 110%;
+  margin: 0;
 }
