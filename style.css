@@ -108,7 +108,7 @@ nav a:hover {
 
 h1 {
   font-family: 'Pixelated retro style', sans-serif;
-  font-size: 1em;
+  font-size: 2em;
   color: #0ff;
   text-shadow: 0 0 20px #0ff, 0 0 10px #08f;
 }
@@ -186,7 +186,7 @@ body {
 }
 
 .profile-pic {
-  width: 40%;             /* adjust size */
+  width: 20%;             /* adjust size */
   height: auto;
   border-radius: 50%;       /* optional: circular image */
   box-shadow: 0 0 20px #0ff, 0 0 40px #08f;
