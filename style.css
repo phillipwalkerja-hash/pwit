@@ -110,13 +110,13 @@ h1 {
   font-family: 'Pixelated retro style', sans-serif;
   font-size: 2em;
   color: #0ff;
-  text-shadow: 0 0 20px #0ff, 0 0 10px #08f;
+  text-shadow: 0 0 5px #0ff, 0 0 0px #08f;
 }
 h2 {
   font-family: 'Audiowide', sans-serif;
   text-align: center;
-  color: #a0ebeb;
-  text-shadow: 0 0 5px #08f, 0 0 0px #08f;
+  color: #0ff;
+  text-shadow: 0 0 10px #08f, 0 0 10px #08f;
 }
 
 
@@ -127,16 +127,16 @@ font-family: 'Pixelated retro style', sans-serif
   font-size: 1.2em;
   line-height: 1.6;
   color: #0ff;
-text-shadow: 0 0 50px #0ff, 0 0 5px #08f; /* glowing effect */
+text-shadow: 0 0 50px #0ff, 0 0 0.5px #08f; /* glowing effect */
 
 }
 .p2 {
   font-family: 'Roboto', sans-serif;   /* or any font you import */
   font-size: 1.1em;                       /* custom size */
-  color: #a0ebeb;                            /* neon cyan text */
+  color: #0ff;                            /* neon cyan text */
   text-align: center;                     /* center align */
-  text-shadow: 0 0 2px #0ff, 0 0 0.05px #08f; /* glowing effect */
-  background: rgba(0,0,0,0.05);            /* optional background */
+  text-shadow: 0 0 2px #0ff, 0 0 5px #08f; /* glowing effect */
+  background: rgba(0,0,0,0);            /* optional background */
   padding: 10px;
   line-height: 2;
 
@@ -257,4 +257,9 @@ pre {
   font-family: 'Orbitron', sans-serif;
   font-size: 110%;
   margin: 0;
+}
+.img-right {
+  float: right;
+  width: 200px;
+  margin: 0 0 10px 15px;
 }
