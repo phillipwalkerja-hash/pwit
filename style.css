@@ -127,7 +127,7 @@ font-family: 'Pixelated retro style', sans-serif
   font-size: 1.2em;
   line-height: 1.6;
   color: #0ff;
-text-shadow: 0 0 50px #0ff, 0 0 0.5px #08f; /* glowing effect */
+text-shadow: 0 0 50px #0ff, 0 0 10px #08f; /* glowing effect */
 
 }
 .p2 {
@@ -262,4 +262,32 @@ pre {
   float: right;
   width: 200px;
   margin: 0 0 10px 15px;
+}
+
+.neon-text {
+ font-family: 'Audiowide', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+
+@keyframes glow {
+  0%   { border-color: #0ff; box-shadow: 0 0 20px #0ff; }
+  50%  { border-color: #f0f; box-shadow: 0 0 20px #f0f; }
+  100% { border-color: #ff0; box-shadow: 0 0 20px #ff0; }
+}
+.container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 600px;           /* Set a specific height for the container */
 }
