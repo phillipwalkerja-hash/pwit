@@ -126,14 +126,14 @@ font-family: 'Pixelated retro style', sans-serif
   margin: auto;
   font-size: 1.2em;
   line-height: 1.6;
-  color: #0ff;
+  color: #ccf9ff;
 text-shadow: 0 0 50px #0ff, 0 0 10px #08f; /* glowing effect */
 
 }
 .p2 {
   font-family: 'Roboto', sans-serif;   /* or any font you import */
   font-size: 1.1em;                       /* custom size */
-  color: #0ff;                            /* neon cyan text */
+  color: #ccf9ff;                            /* neon cyan text */
   text-align: center;                     /* center align */
   text-shadow: 0 0 2px #0ff, 0 0 5px #08f; /* glowing effect */
   background: rgba(0,0,0,0);            /* optional background */
